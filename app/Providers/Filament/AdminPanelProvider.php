@@ -31,7 +31,7 @@ final class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('admin')
+            ->path('/l')
             ->login(Login::class)
             ->spa()
             ->profile()
