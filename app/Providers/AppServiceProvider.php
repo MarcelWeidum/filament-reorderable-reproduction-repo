@@ -12,6 +12,7 @@ use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 
 final class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,7 @@ final class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        Model::unguard();
         $this->configureTable();
         $this->translatableComponents();
     }
